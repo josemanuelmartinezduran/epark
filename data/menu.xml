@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <!-- Menu  epark -->
+    <menuitem id="epark_menu" parent="" name="epark" action="" />
+    <!-- Menu  Caja -->
+    <menuitem id="caja_menu" parent="epark_menu" name="Caja" action="caja_actn" />
+    <!-- Menu  Ticket -->
+    <menuitem id="ticket_menu" parent="epark_menu" name="Cobros" action="ticket_actn" />
+    <!-- Menu  Tarifa -->
+    <menuitem id='tarifa_menu' parent='epark_menu' name='Tarifa' action='tarifa_actn' />
+</flectra>

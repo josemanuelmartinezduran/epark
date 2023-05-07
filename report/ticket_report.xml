@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flectra>
+    <template id="ticket">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="o">
+                <div class="page">
+                    <h1>
+                        Estacionamiento la Paz 
+                    </h1>
+                    <img
+								t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.folio, 400, 70)"
+								style="margin-left:0px;position:relative;left:-85px" />
+                    <h2>
+                    </h2>
+                    <h2>
+                        Folio <t t-esc="o.folio" />
+                    </h2>
+                    <h2>
+                        Marca <t t-esc="o.marca" />
+                    </h2>
+                    <h2>
+                        Modelo <t t-esc="o.modelo" />
+                    </h2>
+                    <h2>
+                        Color <t t-esc="o.color" />
+                    </h2>
+                    <h2>
+                        Placas <t t-esc="o.placas" />
+                    </h2>
+                    
+                </div>
+            </t>
+        </t>
+    </template>
+    <report id="ticket_report" model="epark.ticket" string="Ticket" report_type="qweb-pdf" name="epark.ticket" file="" />
+</flectra>
